@@ -1,12 +1,21 @@
+<% if user_signed_in? %>
+<h3> You have successfully logged in!</h3>
+<% else %>
 
-<h2> You are logged into the TVWC Blog </h2>
-
-	<div class="hero-unit">
-	<h1> Welcome to the TVWC Members Blog!</h1> <br/>
-<%= link_to "TVWC Public Website", "http://tvwc.org.au" %>
-	
-	<br/>
-		<p>
-      <%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
+<p><%= link_to "TVWC Public Website", "http://tvwc.org.au" %>
+      <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-success btn-large" %>
     </p>
+   
+   
+	<div class="hero-unit">
+	<h2> Welcome to the TVWC Office Bearers Private Site!</h2>
+	<h3> Office Bearers can use this blog style site to discuss TVWC issues, make suggestions and keep track of ongoing matters. It will hopefully assist in maintaining records and make it easier for office bearers to stay posted and up to date with what is going on. 
+	If this site is successful we can expand it to include a members version with a section for phonies where rosters can be posted and communication between phonies and cordinaters can be streamlined. <br/>
+
+ A links page will contain links to sites relevant to TVWC similar to our links page on the public site. Eventually users will be able to add links to this page.
+ 
+ A documents page will allow the upload of documents for reference so that users can conveniently cite from the docs page in posts.</h3>
+	<br/>
+		
   </div>
+  <% end %>

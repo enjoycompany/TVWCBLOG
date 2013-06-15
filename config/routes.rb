@@ -1,9 +1,15 @@
 Tvwcblog::Application.routes.draw do
+  devise_for :users
+
+  devise_for :installs
+
   root :to => 'pages#home'
   get 'links' => 'pages#links'
-  
-  get 'docs' => 'pages#docs'
-  # The priority is based upon order of creation:
+    get 'docs' => 'pages#docs'
+    get 'sign-up' => 'users#sign_up'
+    get 'logout' => 'users#sign_out'
+    
+      # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

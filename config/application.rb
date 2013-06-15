@@ -8,7 +8,7 @@ if defined?(Bundler)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
-
+#require 'devise/orm/YOUR_ORM'
 module Tvwcblog
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -58,5 +58,7 @@ module Tvwcblog
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    #required for devise on heroku
+    config.assets.initialize_on_precompile = false
   end
 end
