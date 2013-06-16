@@ -5,13 +5,19 @@
 			  <b>Topic:</b>
 			  <%= @post.topic %>
 			</p>
+			<p>
+			  <b>Author:</b>
+			  <%= @post.user.name %>
+			</p>
 			<br/>
 
 			<p>
 		  <b>Content:</b>
 		  <%= @post.content %>
 			</p>
+			<% if current_user == @post.user %>
 			<%= link_to 'Edit', edit_post_path(@post) %> |
+			<% end %>
 			<%= link_to 'Back', posts_path %>
 		</div>
 	</div>
