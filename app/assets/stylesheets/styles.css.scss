@@ -7,7 +7,7 @@ $navbarBackground: white;
 $btnPrimaryBackground: green;
 @import 'bootstrap-responsive';
 body{
-	padding-top: 170px;
+	padding-top: 200px;
 	background-color: #fff;
 	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
   font-size: 0.81em;
@@ -16,22 +16,22 @@ body{
 }
 .footer {
 	margin-top: 50px;
-	color: $grayLight;
+	background-color: #6e6e6e;
+	color: #000;
+	height: 200px;
+	padding-left: 33%;
+	font-size: 0.7em;
+	margin-top: 50px;
+	width: 100%;
  a {
 	color: $gray;
    }
 }
+
 .navbar {
 	background-color: #669900;
 }
-.footer{
-	background-color: black;
-		color: $grayLight;
-		padding-left: 33%;
-		font-size: 0.7em;
-		margin-top: 50px;
-		width: 100%;
-	}
+
 	.span8{
 		background-color: #66cc00;
 		padding-left: 15px;
@@ -62,3 +62,10 @@ h1{
 	{
   background-color: green;
 	}
+	h2{
+		color: green;
+	}
+	h3{
+		color: green;
+		}
+	@import  'bootstrap-responsive';

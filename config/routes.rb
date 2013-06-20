@@ -1,17 +1,28 @@
 Tvwcblog::Application.routes.draw do
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
+  resources :comments
+  resources :posts do
+  resources :comments
+end
+  
   resources :posts
 
 
   devise_for :users
 
   devise_for :installs
+  match 'users/:id' => 'users#show', as: :user
 
   root :to => 'pages#home'
+  get "users/show"
+  get "user/show"
   get 'links' => 'pages#links'
     get 'docs' => 'pages#docs'
     get 'sign-up' => 'users#sign_up'
     get 'logout' => 'users#sign_out'
-    
+    get 'comments' => 'comments#index'
+    get 'post'  => 'comments#show'
       # The priority is based upon order of creation:
   # first created -> highest priority.
 
